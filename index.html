@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<Title>Notary</Title>
+	
+	
+		<meta charset="utf-8">
+		
+		<link rel="stylesheet" href="style.css">
+		<script src="SearchString.js"></script>
+		
+		<!--BootstapCSS-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+	</head>
+	
+	<body>
+		<div class="container">
+			<div class="row" >
+			
+				<!--Main area-->
+				<div class="col-md-8"></div>
+					<img src="NotoryLogowhiteMed.png" class="responsive">
+					<div class="card mb-4">
+						<h2 class="card-header" id="fileName">Book Title</h2>
+						
+						<div class="card-body">
+							<div class="displayBox scroll-box" id="fileContent">
+								Select a book on the right
+							</div>
+						</div>
+						
+						<div class="card-footer text-muted">
+						
+						</div>
+						
+					</div>
+				
+				
+				<!--Sidebar-->
+				<div class="col-md-4">
+					
+					<!--Search-->
+					<div class="card my-4">
+						<h5 class="card-header">Search</h5>
+						<div class="card-body">
+							<div class="input-group">
+								<input type="text" class="form-control" id="keyword" placeholder="Search here">
+								<span class="input-group-btn">
+									<button class="btn btn-secondary" type="button" onclick="performMark()">Search</button>
+								</span>
+							</div>
+						</div>
+						<div class="card-footer" id="searchstat">
+					
+					</div>
+					</div>
+					
+					<!--Select a book-->
+					<div class="card my-4">
+					
+						<h5 class="card-header">Select a book</h5>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-12">
+									<ul class="list-unstyled mb-0">
+										<li><a href="#" onClick="loadBook('JekyllAndHyde.txt','Dr. Jekyll and Mr. Hyde')">Dr. Jekyll and Mr. Hyde</a></li>
+										<li><a href="#" onclick="loadBook('AliceInWonderland.txt','Alice in Wonderland')" >Alice in Wonderland</a></li>
+										<li><a href="#" onclick="loadBook('LOTR.txt','Lord of the Rings')" >Lord of the Rings</a></li>	
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--most used words-->
+					<div class="card my-4">
+						<h5 class="card-header">Most used words</h5>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-12">
+									<ul class="list-unstyled md-0" id="mostUsed">
+									
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--least used words-->
+					<div class="card my-4">
+						<h5 class="card-header">Least used words</h5>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-lg-12">
+									<ul class="list-unstyled md-0" id="leastUsed">
+									
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--Document stats-->
+					<div class="card my-4">
+						<h5 class="card-header">Document stats</h5>
+						<div class="card-body">
+							<ul class="list-unstyled md-0">
+								<li id="docLength"></li>
+								<li id="wordCount"></li>
+								<li id="charCount"></li>		
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+					
+		<script id="template-ul-items" type="text/template">
+			<li>
+				{{val}}
+			</li>
+		</script>			
+	
+	
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>	
+	</body>
+	
+</html>
